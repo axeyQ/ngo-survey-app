@@ -4,12 +4,10 @@ import { useState, useEffect } from 'react';
 import { SessionProvider } from 'next-auth/react';
 import SurveyForm from '@/components/SurveyForm';
 import AuthButton from '@/components/AuthButton';
-import { signIn, signOut, useSession } from 'next-auth/react';
 
 export default function Home() {
   // We'll handle the loading state to prevent form flash
   const [isLoading, setIsLoading] = useState(true);
-  const { data: session, status } = useSession();
   
   useEffect(() => {
     // If we've just returned from OAuth flow, this prevents the form from flashing briefly
@@ -19,14 +17,7 @@ export default function Home() {
     
     return () => clearTimeout(timer);
   }, []);
-
-  if (session) {
-    return (
-      <div className="flex justify-center">
-            <AuthButton />
-          </div>
-    );
-  }
+  
   return (
     <SessionProvider>
       <main className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
