@@ -95,7 +95,7 @@ export default function SurveyForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 max-w-md mx-auto">
+    <form onSubmit={handleSubmit} className="space-y-6 max-w-md mx-auto ">
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-gray-700">
           Your Name
@@ -105,7 +105,7 @@ export default function SurveyForm() {
           id="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2 border"
+          className="mt-1 block w-full rounded-md text-black border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2 border"
           placeholder="Enter your name"
           required
         />
@@ -119,7 +119,7 @@ export default function SurveyForm() {
           id="survey"
           value={selectedSurvey}
           onChange={(e) => setSelectedSurvey(e.target.value)}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2 border"
+          className="mt-1 block w-full rounded-md border-gray-300  text-black shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2 border"
           required
         >
           <option value="">-- Please select a survey --</option>

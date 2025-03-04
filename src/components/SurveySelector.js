@@ -66,7 +66,7 @@ export default function SurveySelector({ name, setName, selectedSurvey, setSelec
       </div>
 
       <div>
-        <label htmlFor="survey" className="block text-sm font-medium text-gray-700 mb-1">
+        <label htmlFor="survey" className="block text-sm font-medium text-black mb-1">
           Select Survey
         </label>
         {isLoading ? (
