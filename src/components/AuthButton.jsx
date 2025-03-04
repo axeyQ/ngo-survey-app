@@ -24,7 +24,7 @@ export default function AuthButton() {
   return (
     <button
       onClick={() => signIn('google')}
-      className="flex items-center justify-center gap-2 bg-white border border-gray-300 text-gray-700 font-semibold py-2 px-4 rounded-lg hover:bg-gray-50"
+      className="hidden items-center justify-center gap-2 bg-white border border-gray-300 text-gray-700 font-semibold py-2 px-4 rounded-lg hover:bg-gray-50"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
